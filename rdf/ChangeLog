@@ -1,0 +1,11 @@
+=========================
+Version 0.1 (July 2010)
+=========================
+
+ * ADDED: pbo:PlayBackCounter - a explicitly named play back counter
+ * ADDED: pbo:SkipCounter - a explicitly named skip counter
+ * ADDED: pbo:Playlist - a playlist concept modelled as ordered list, with additional properties, e.g. genre, mood, occasion
+ * ADDED: pbo:PlaylistSlot - a playlist slot, with probably additional properties and specifically typed items inside
+ * ADDED: pbo:playlist_item - a property to related specifically typed items to a playlist (currently bibo:Document, 
+          frbr:Endeavour, pbo:Playlist)
+ * ADDED: pbo:occasion - an occasion for which a playlist was created

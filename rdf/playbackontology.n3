@@ -1,0 +1,93 @@
+# Saved by TopBraid on Mon Jul 19 23:39:31 CEST 2010
+# baseURI: http://purl.org/ontology/pbo/core#
+# imports: http://purl.org/ontology/olo/core
+# imports: http://purl.org/ontology/bibo/
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://www.w3.org/2003/06/sw-vocab-status/ns
+# imports: http://purl.org/ontology/co/core
+
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+@prefix co:      <http://purl.org/ontology/co/core#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix frbr:    <http://purl.org/vocab/frbr/core#> .
+@prefix olo:     <http://purl.org/ontology/olo/core#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix pbo:     <http://purl.org/ontology/pbo/core#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs:      <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+pbo:  rdf:type owl:Ontology ;
+      dc:creator <http://foaf.me/zazi#me> ;
+      dc:date "2010-07-19T20:10:52+01:00"^^xsd:dateTime ;
+      dc:description """The Play Back Ontology specification provides basic concepts and properties 
+for describing a concepts that are related to the play back domain, e.g. an playlist, play back count and skip counter 
+on/ for the Semantic Web. This document contains a RDF description of the Play Back Ontology."""@en ;
+      dc:title "The Play Back Ontology"@en ;
+      owl:imports bibo: , <http://purl.org/ontology/olo/core> , <http://www.w3.org/2003/06/sw-vocab-status/ns> , <http://purl.org/ontology/co/core> , dc: ;
+      owl:versionInfo 0.1 .
+
+pbo:PlayBackCounter
+      rdf:type owl:Class ;
+      rdfs:comment """A play back counter of a specific object. A play back counter is related to  specific co:ScrobbleEvent instances, which 
+are the related play back events of an object."""@en ;
+      rdfs:isDefinedBy pbo: ;
+      rdfs:label "Play Back Counter"@en ;
+      rdfs:subClassOf co:Counter ;
+      vs:term_status "unstable"@en .
+
+pbo:Playlist
+      rdf:type owl:Class ;
+      rdfs:comment "A playlist of specific media items, e.g. music tracks, videos or slides."@en ;
+      rdfs:isDefinedBy pbo: ;
+      rdfs:label "Playlist"@en ;
+      rdfs:subClassOf olo:OrderedList ;
+      vs:term_status "unstable"@en .
+
+pbo:PlaylistSlot
+      rdf:type owl:Class ;
+      rdfs:comment """A playlist slot. It could contain e.g. a music track, a video or a slide, and maybe related with some 
+additional properties. However, it could maybe also included a \"sub\" playlist, e.g. to keep a fixed sequence of some tracks."""@en ;
+      rdfs:isDefinedBy pbo: ;
+      rdfs:label "Playlist Slot"@en ;
+      rdfs:subClassOf olo:Slot ;
+      vs:term_status "testing"@en .
+
+pbo:SkipCounter
+      rdf:type owl:Class ;
+      rdfs:comment """A skip counter of a specific object. A skip counter is related to  specific co:ScrobbleEvent instances, which 
+are the related skip events of an object."""@en ;
+      rdfs:isDefinedBy pbo: ;
+      rdfs:label "Skip Counter"@en ;
+      rdfs:subClassOf co:Counter ;
+      vs:term_status "unstable"@en .
+
+pbo:occasion
+      rdf:type rdf:Property ;
+      rdfs:comment "An occasion for which a playlist was created."@en ;
+      rdfs:domain pbo:Playlist ;
+      rdfs:isDefinedBy pbo: ;
+      rdfs:label "has occassion"@en ;
+      owl:inverseOf
+              [ rdf:type rdf:Property ;
+                rdfs:label "is occassion of"@en
+              ] ;
+      vs:term_status "unstable"@en .
+
+pbo:playlist_item
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment """A specific playlist item, e.g. a music track, video or slides. The range types of this property must be 
+based on bibo:Document or frbr:Endeavour (to keep it somehow media based)."""@en ;
+      rdfs:domain pbo:PlaylistSlot ;
+      rdfs:isDefinedBy pbo: ;
+      rdfs:label "has playlist item"@en ;
+      rdfs:range
+              [ owl:unionOf (bibo:Document frbr:Endeavour pbo:PlaylistSlot)
+              ] ;
+      rdfs:subPropertyOf olo:item ;
+      owl:inverseOf
+              [ rdf:type owl:ObjectProperty ;
+                rdfs:label "is playlist item of"@en
+              ] ;
+      vs:term_status "unstable"@en .
