@@ -3,6 +3,7 @@
    xmlns:bibo="http://purl.org/ontology/bibo/"
    xmlns:co="http://purl.org/ontology/co/core#"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
    xmlns:frbr="http://purl.org/vocab/frbr/core#"
    xmlns:olo="http://purl.org/ontology/olo/core#"
    xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -14,7 +15,7 @@
    xml:base="http://purl.org/ontology/pbo/core#">
   <owl:Ontology rdf:about="http://purl.org/ontology/pbo/core#">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
-    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-20T14:22:52+01:00</dc:date>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-20T15:21:52+01:00</dc:date>
     <dc:description xml:lang="en">The Play Back Ontology specification provides basic concepts and properties 
 for describing a concepts that are related to the play back domain, e.g. an playlist, play back count and skip counter 
 on/ for the Semantic Web. This document contains a RDF description of the Play Back Ontology.</dc:description>
@@ -25,7 +26,7 @@ on/ for the Semantic Web. This document contains a RDF description of the Play B
     <owl:imports rdf:resource="http://purl.org/ontology/olo/core"/>
     <owl:imports rdf:resource="http://purl.org/vocab/frbr/core"/>
     <owl:imports rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns"/>
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.21</owl:versionInfo>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</owl:versionInfo>
   </owl:Ontology>
   <owl:Class rdf:about="http://purl.org/ontology/pbo/core#FixedPlaylist">
     <rdfs:comment xml:lang="en">A (sub) playlist of a fixed length and a fixed order. This concept should be used to express static relations, 
@@ -57,18 +58,6 @@ additional properties. However, it could maybe also included a "sub" playlist, e
     </rdfs:subClassOf>
     <vs:term_status xml:lang="en">testing</vs:term_status>
   </owl:Class>
-  <rdf:Property rdf:about="http://purl.org/ontology/pbo/core#occasion">
-    <rdfs:comment xml:lang="en">An occasion for which a playlist was created.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/ontology/pbo/core#Playlist"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/pbo/core#"/>
-    <rdfs:label xml:lang="en">has occassion</rdfs:label>
-    <owl:inverseOf>
-      <rdf:Property>
-        <rdfs:label xml:lang="en">is occassion of</rdfs:label>
-      </rdf:Property>
-    </owl:inverseOf>
-    <vs:term_status xml:lang="en">unstable</vs:term_status>
-  </rdf:Property>
   <owl:ObjectProperty rdf:about="http://purl.org/ontology/pbo/core#play_back_counter">
     <rdfs:comment xml:lang="en">Associates a play back counter of a specific object. A play back counter is related to  specific co:ScrobbleEvent 
 instances, which are the related play back events of an object.</rdfs:comment>

@@ -1,4 +1,4 @@
-# Saved by TopBraid on Tue Jul 20 15:22:50 CEST 2010
+# Saved by TopBraid on Tue Jul 20 16:21:22 CEST 2010
 # baseURI: http://purl.org/ontology/pbo/core#
 # imports: http://purl.org/ontology/olo/core
 # imports: http://purl.org/ontology/bibo/
@@ -10,6 +10,7 @@
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix co:      <http://purl.org/ontology/co/core#> .
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
 @prefix frbr:    <http://purl.org/vocab/frbr/core#> .
 @prefix olo:     <http://purl.org/ontology/olo/core#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
@@ -21,13 +22,13 @@
 
 pbo:  rdf:type owl:Ontology ;
       dc:creator <http://foaf.me/zazi#me> ;
-      dc:date "2010-07-20T14:22:52+01:00"^^xsd:dateTime ;
+      dc:date "2010-07-20T15:21:52+01:00"^^xsd:dateTime ;
       dc:description """The Play Back Ontology specification provides basic concepts and properties 
 for describing a concepts that are related to the play back domain, e.g. an playlist, play back count and skip counter 
 on/ for the Semantic Web. This document contains a RDF description of the Play Back Ontology."""@en ;
       dc:title "The Play Back Ontology"@en ;
       owl:imports bibo: , <http://purl.org/ontology/olo/core> , <http://www.w3.org/2003/06/sw-vocab-status/ns> , <http://purl.org/vocab/frbr/core> , <http://purl.org/ontology/co/core> , dc: ;
-      owl:versionInfo 0.21 .
+      owl:versionInfo 0.3 .
 
 pbo:FixedPlaylist
       rdf:type owl:Class ;
@@ -59,18 +60,6 @@ additional properties. However, it could maybe also included a \"sub\" playlist,
                 owl:onProperty pbo:playlist_item
               ] ;
       vs:term_status "testing"@en .
-
-pbo:occasion
-      rdf:type rdf:Property ;
-      rdfs:comment "An occasion for which a playlist was created."@en ;
-      rdfs:domain pbo:Playlist ;
-      rdfs:isDefinedBy pbo: ;
-      rdfs:label "has occassion"@en ;
-      owl:inverseOf
-              [ rdf:type rdf:Property ;
-                rdfs:label "is occassion of"@en
-              ] ;
-      vs:term_status "unstable"@en .
 
 pbo:play_back_counter
       rdf:type owl:ObjectProperty ;

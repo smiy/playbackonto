@@ -1,9 +1,8 @@
-* add pbo:Playlist to the domain of mo:genre
-* add pbo:Playlist to the domain of mo:mood (which currently not exists)
+* add pbo:Playlist to the domain of mo:genre => DONE
+* add pbo:Playlist to the domain of mo:mood (which currently not exists) => DONE
 -> or do we have to shift these concepts upwards (MO independent), because it is a music independent playlist concept?
-(think of movie genres etc.)
-* make it possible to associate similarity statements, which are responsible for the playlist and its order
-* create a mechanism for fixed sequences in playlists
+(think of movie genres etc.) => DONE
+* make it possible to associate similarity statements, which are responsible for the playlist and its order => DONE
 
 => maybe all these statements must also be associated to a specific user or a group of users (one could also create a copy 
-of an equal playlist and associate different association statements (!, application of sim:Association (?!)) to it.
+of an equal playlist and associate different association statements (!, application of sim:Association (?!)) to it. => DOǸE

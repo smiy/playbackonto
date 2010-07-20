@@ -1,8 +1,10 @@
 =========================
-Version 0.21 (July 2010)
+Version 0.3 (July 2010)
 =========================
 
 * ADDED: pbo:FixedPlaylist - to express static relations, e.g. "those three music tracks must always be played in a row"
+* REMOVED: pbo:occassion - outsourced to Association Ontology (http://purl.org/ontology/ao/core#)
+
 =========================
 Version 0.2 (July 2010)
 =========================
