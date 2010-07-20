@@ -1,4 +1,13 @@
 =========================
+Version 0.2 (July 2010)
+=========================
+
+ * CHANGED: pbo:PlayBackCounter to pbo:play_back_counter, which is a owl:ObjectProperty
+ * CHANGED: pbo:SkipCounter to pbo:skip_counter, which is a owl:ObjectProperty
+ * ADDED: pbo:play_back_object - to associate a specific play back object to its play back counter
+ * ADDED: pbo:skip_counter_object - to associate a specific skip object to its skip counter
+
+=========================
 Version 0.1 (July 2010)
 =========================
 

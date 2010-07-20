@@ -1,10 +1,11 @@
-# Saved by TopBraid on Mon Jul 19 23:39:31 CEST 2010
+# Saved by TopBraid on Tue Jul 20 11:15:34 CEST 2010
 # baseURI: http://purl.org/ontology/pbo/core#
 # imports: http://purl.org/ontology/olo/core
 # imports: http://purl.org/ontology/bibo/
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://www.w3.org/2003/06/sw-vocab-status/ns
 # imports: http://purl.org/ontology/co/core
+# imports: http://purl.org/vocab/frbr/core
 
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix co:      <http://purl.org/ontology/co/core#> .
@@ -20,22 +21,13 @@
 
 pbo:  rdf:type owl:Ontology ;
       dc:creator <http://foaf.me/zazi#me> ;
-      dc:date "2010-07-19T20:10:52+01:00"^^xsd:dateTime ;
+      dc:date "2010-07-20T10:15:52+01:00"^^xsd:dateTime ;
       dc:description """The Play Back Ontology specification provides basic concepts and properties 
 for describing a concepts that are related to the play back domain, e.g. an playlist, play back count and skip counter 
 on/ for the Semantic Web. This document contains a RDF description of the Play Back Ontology."""@en ;
       dc:title "The Play Back Ontology"@en ;
-      owl:imports bibo: , <http://purl.org/ontology/olo/core> , <http://www.w3.org/2003/06/sw-vocab-status/ns> , <http://purl.org/ontology/co/core> , dc: ;
-      owl:versionInfo 0.1 .
-
-pbo:PlayBackCounter
-      rdf:type owl:Class ;
-      rdfs:comment """A play back counter of a specific object. A play back counter is related to  specific co:ScrobbleEvent instances, which 
-are the related play back events of an object."""@en ;
-      rdfs:isDefinedBy pbo: ;
-      rdfs:label "Play Back Counter"@en ;
-      rdfs:subClassOf co:Counter ;
-      vs:term_status "unstable"@en .
+      owl:imports bibo: , <http://purl.org/ontology/olo/core> , <http://www.w3.org/2003/06/sw-vocab-status/ns> , <http://purl.org/vocab/frbr/core> , <http://purl.org/ontology/co/core> , dc: ;
+      owl:versionInfo 0.2 .
 
 pbo:Playlist
       rdf:type owl:Class ;
@@ -54,15 +46,6 @@ additional properties. However, it could maybe also included a \"sub\" playlist,
       rdfs:subClassOf olo:Slot ;
       vs:term_status "testing"@en .
 
-pbo:SkipCounter
-      rdf:type owl:Class ;
-      rdfs:comment """A skip counter of a specific object. A skip counter is related to  specific co:ScrobbleEvent instances, which 
-are the related skip events of an object."""@en ;
-      rdfs:isDefinedBy pbo: ;
-      rdfs:label "Skip Counter"@en ;
-      rdfs:subClassOf co:Counter ;
-      vs:term_status "unstable"@en .
-
 pbo:occasion
       rdf:type rdf:Property ;
       rdfs:comment "An occasion for which a playlist was created."@en ;
@@ -75,6 +58,26 @@ pbo:occasion
               ] ;
       vs:term_status "unstable"@en .
 
+pbo:play_back_counter
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment """Associates a play back counter of a specific object. A play back counter is related to  specific co:ScrobbleEvent 
+instances, which are the related play back events of an object."""@en ;
+      rdfs:isDefinedBy pbo: ;
+      rdfs:label "has play back Counter"@en ;
+      rdfs:subPropertyOf co:event_counter ;
+      vs:term_status "unstable"@en .
+
+pbo:play_back_object
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Associates a play back object to its related play back counter."@en ;
+      rdfs:isDefinedBy pbo: ;
+      rdfs:label "has play back object"@en ;
+      rdfs:range
+              [ owl:unionOf (bibo:Document frbr:Endeavour)
+              ] ;
+      rdfs:subPropertyOf co:object ;
+      vs:term_status "unstable"@en .
+
 pbo:playlist_item
       rdf:type owl:ObjectProperty ;
       rdfs:comment """A specific playlist item, e.g. a music track, video or slides. The range types of this property must be 
@@ -83,11 +86,31 @@ based on bibo:Document or frbr:Endeavour (to keep it somehow media based)."""@en
       rdfs:isDefinedBy pbo: ;
       rdfs:label "has playlist item"@en ;
       rdfs:range
-              [ owl:unionOf (bibo:Document frbr:Endeavour pbo:PlaylistSlot)
+              [ owl:unionOf (bibo:Document frbr:Endeavour pbo:Playlist)
               ] ;
       rdfs:subPropertyOf olo:item ;
       owl:inverseOf
               [ rdf:type owl:ObjectProperty ;
                 rdfs:label "is playlist item of"@en
               ] ;
+      vs:term_status "unstable"@en .
+
+pbo:skip_counter
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment """Associates a skip counter of a specific object. A skip counter is related to  specific co:ScrobbleEvent 
+instances, which are the related skip events of an object."""@en ;
+      rdfs:isDefinedBy pbo: ;
+      rdfs:label "has skip counter"@en ;
+      rdfs:subPropertyOf co:event_counter ;
+      vs:term_status "unstable"@en .
+
+pbo:skip_object
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Associates a skip object to its related skip counter."@en ;
+      rdfs:isDefinedBy pbo: ;
+      rdfs:label "has skip object"@en ;
+      rdfs:range
+              [ owl:unionOf (bibo:Document frbr:Endeavour)
+              ] ;
+      rdfs:subPropertyOf co:object ;
       vs:term_status "unstable"@en .
