@@ -1,4 +1,4 @@
-# Saved by TopBraid on Tue Jul 20 11:15:34 CEST 2010
+# Saved by TopBraid on Tue Jul 20 12:51:39 CEST 2010
 # baseURI: http://purl.org/ontology/pbo/core#
 # imports: http://purl.org/ontology/olo/core
 # imports: http://purl.org/ontology/bibo/
@@ -34,7 +34,7 @@ pbo:Playlist
       rdfs:comment "A playlist of specific media items, e.g. music tracks, videos or slides."@en ;
       rdfs:isDefinedBy pbo: ;
       rdfs:label "Playlist"@en ;
-      rdfs:subClassOf olo:OrderedList ;
+      rdfs:subClassOf olo:OrderedList , bibo:Document ;
       vs:term_status "unstable"@en .
 
 pbo:PlaylistSlot
@@ -44,6 +44,11 @@ additional properties. However, it could maybe also included a \"sub\" playlist,
       rdfs:isDefinedBy pbo: ;
       rdfs:label "Playlist Slot"@en ;
       rdfs:subClassOf olo:Slot ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty pbo:playlist_item
+              ] ;
       vs:term_status "testing"@en .
 
 pbo:occasion
@@ -78,6 +83,15 @@ pbo:play_back_object
       rdfs:subPropertyOf co:object ;
       vs:term_status "unstable"@en .
 
+pbo:playlist
+      rdf:type owl:ObjectProperty , rdf:Property ;
+      rdfs:comment "Associates a playlist to something."@en ;
+      rdfs:domain owl:Thing ;
+      rdfs:isDefinedBy pbo: ;
+      rdfs:label "has playlist"@en ;
+      rdfs:range pbo:Playlist ;
+      vs:term_status "testing"@en .
+
 pbo:playlist_item
       rdf:type owl:ObjectProperty ;
       rdfs:comment """A specific playlist item, e.g. a music track, video or slides. The range types of this property must be 
@@ -86,7 +100,7 @@ based on bibo:Document or frbr:Endeavour (to keep it somehow media based)."""@en
       rdfs:isDefinedBy pbo: ;
       rdfs:label "has playlist item"@en ;
       rdfs:range
-              [ owl:unionOf (bibo:Document frbr:Endeavour pbo:Playlist)
+              [ owl:unionOf (bibo:Document frbr:Endeavour)
               ] ;
       rdfs:subPropertyOf olo:item ;
       owl:inverseOf
@@ -94,6 +108,15 @@ based on bibo:Document or frbr:Endeavour (to keep it somehow media based)."""@en
                 rdfs:label "is playlist item of"@en
               ] ;
       vs:term_status "unstable"@en .
+
+pbo:playlist_slot
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "A specific slot in a playlist."^^xsd:string ;
+      rdfs:domain pbo:Playlist ;
+      rdfs:label "has playlist slot"^^xsd:string ;
+      rdfs:range pbo:PlaylistSlot ;
+      rdfs:subPropertyOf olo:slot ;
+      vs:term_status "testing"^^xsd:string .
 
 pbo:skip_counter
       rdf:type owl:ObjectProperty ;
