@@ -1,4 +1,4 @@
-# Saved by TopBraid on Tue Jul 20 12:51:39 CEST 2010
+# Saved by TopBraid on Tue Jul 20 15:22:50 CEST 2010
 # baseURI: http://purl.org/ontology/pbo/core#
 # imports: http://purl.org/ontology/olo/core
 # imports: http://purl.org/ontology/bibo/
@@ -21,13 +21,22 @@
 
 pbo:  rdf:type owl:Ontology ;
       dc:creator <http://foaf.me/zazi#me> ;
-      dc:date "2010-07-20T10:15:52+01:00"^^xsd:dateTime ;
+      dc:date "2010-07-20T14:22:52+01:00"^^xsd:dateTime ;
       dc:description """The Play Back Ontology specification provides basic concepts and properties 
 for describing a concepts that are related to the play back domain, e.g. an playlist, play back count and skip counter 
 on/ for the Semantic Web. This document contains a RDF description of the Play Back Ontology."""@en ;
       dc:title "The Play Back Ontology"@en ;
       owl:imports bibo: , <http://purl.org/ontology/olo/core> , <http://www.w3.org/2003/06/sw-vocab-status/ns> , <http://purl.org/vocab/frbr/core> , <http://purl.org/ontology/co/core> , dc: ;
-      owl:versionInfo 0.2 .
+      owl:versionInfo 0.21 .
+
+pbo:FixedPlaylist
+      rdf:type owl:Class ;
+      rdfs:comment """A (sub) playlist of a fixed length and a fixed order. This concept should be used to express static relations, 
+e.g. \"those three music tracks must always be played in a row\"."""@en ;
+      rdfs:isDefinedBy pbo: ;
+      rdfs:label "Fixed Playlist"@en ;
+      rdfs:subClassOf pbo:Playlist ;
+      vs:term_status "testing"@en .
 
 pbo:Playlist
       rdf:type owl:Class ;

@@ -14,7 +14,7 @@
    xml:base="http://purl.org/ontology/pbo/core#">
   <owl:Ontology rdf:about="http://purl.org/ontology/pbo/core#">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
-    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-20T10:15:52+01:00</dc:date>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-20T14:22:52+01:00</dc:date>
     <dc:description xml:lang="en">The Play Back Ontology specification provides basic concepts and properties 
 for describing a concepts that are related to the play back domain, e.g. an playlist, play back count and skip counter 
 on/ for the Semantic Web. This document contains a RDF description of the Play Back Ontology.</dc:description>
@@ -25,8 +25,16 @@ on/ for the Semantic Web. This document contains a RDF description of the Play B
     <owl:imports rdf:resource="http://purl.org/ontology/olo/core"/>
     <owl:imports rdf:resource="http://purl.org/vocab/frbr/core"/>
     <owl:imports rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns"/>
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.21</owl:versionInfo>
   </owl:Ontology>
+  <owl:Class rdf:about="http://purl.org/ontology/pbo/core#FixedPlaylist">
+    <rdfs:comment xml:lang="en">A (sub) playlist of a fixed length and a fixed order. This concept should be used to express static relations, 
+e.g. "those three music tracks must always be played in a row".</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/pbo/core#"/>
+    <rdfs:label xml:lang="en">Fixed Playlist</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/pbo/core#Playlist"/>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </owl:Class>
   <owl:Class rdf:about="http://purl.org/ontology/pbo/core#Playlist">
     <rdfs:comment xml:lang="en">A playlist of specific media items, e.g. music tracks, videos or slides.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/pbo/core#"/>

@@ -1,4 +1,9 @@
 =========================
+Version 0.21 (July 2010)
+=========================
+
+* ADDED: pbo:FixedPlaylist - to express static relations, e.g. "those three music tracks must always be played in a row"
+=========================
 Version 0.2 (July 2010)
 =========================
 
