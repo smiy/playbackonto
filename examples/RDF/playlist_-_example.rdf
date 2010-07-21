@@ -15,16 +15,19 @@
   <sim:Association rdf:about="http://example.org/BobsAssociation">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
     <ao:genre rdf:resource="http://example.org/Funk"/>
-    <ao:likeminded rdf:resource="http://moustaki.org/foaf.rdf#moustaki"/>
     <ao:mood>happy</ao:mood>
     <ao:occasion>good feeling music</ao:occasion>
+  </sim:Association>
+  <sim:Association rdf:about="http://example.org/BobsAssociationInUse">
+    <ao:included_association rdf:resource="http://example.org/BobsAssociation"/>
+    <ao:likeminded rdf:resource="http://moustaki.org/foaf.rdf#moustaki"/>
   </sim:Association>
   <mo:Genre rdf:about="http://example.org/Funk"/>
   <pbo:Playist rdf:about="http://example.org/FunkyPlaylist">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
     <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A playlist full of funky legends</dc:description>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Funky Playlist</dc:title>
-    <ao:association rdf:resource="http://example.org/BobsAssociation"/>
+    <ao:association rdf:resource="http://example.org/BobsAssociationInUse"/>
     <ao:association rdf:resource="http://example.org/ZazisAssociation"/>
     <olo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</olo:length>
     <pbo:playlist_slot>

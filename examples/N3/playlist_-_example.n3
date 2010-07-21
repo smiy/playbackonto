@@ -28,7 +28,7 @@ ex:FunkyPlaylist a pbo:Playist ;
         dc:creator <http://foaf.me/zazi#me> ;
 		olo:length 2 ;
 		ao:association ex:ZazisAssociation ;
-		ao:association ex:BobsAssociation ;
+		ao:association ex:BobsAssociationInUse ;
 		pbo:playlist_slot [   
 			olo:index 1 ;
 			pbo:playlist_item ex:SexMachine
@@ -55,7 +55,10 @@ ex:BobsAssociation a sim:Association ;
 		dc:creator <http://foaf.me/zazi#me> ;
 		ao:genre ex:Funk ;
 		ao:mood "happy" ;
-		ao:occasion "good feeling music" ;
+		ao:occasion "good feeling music" .
+		
+ex:BobsAssociationInUse a sim:Association ;
+		ao:included_association ex:BobsAssociation ;
 		ao:likeminded <http://moustaki.org/foaf.rdf#moustaki> .
 		
 ex:Funk a mo:Genre .
