@@ -57,7 +57,7 @@ ex:BobsAssociation a sim:Association ;
 		ao:mood "happy" ;
 		ao:occasion "good feeling music" .
 		
-ex:BobsAssociationInUse a sim:Association ;
+ex:BobsAssociationInUse a ao:LikeableAssociation ;
 		ao:included_association ex:BobsAssociation ;
 		ao:likeminded <http://moustaki.org/foaf.rdf#moustaki> .
 		

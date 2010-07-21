@@ -18,10 +18,10 @@
     <ao:mood>happy</ao:mood>
     <ao:occasion>good feeling music</ao:occasion>
   </sim:Association>
-  <sim:Association rdf:about="http://example.org/BobsAssociationInUse">
+  <ao:LikeableAssociation rdf:about="http://example.org/BobsAssociationInUse">
     <ao:included_association rdf:resource="http://example.org/BobsAssociation"/>
     <ao:likeminded rdf:resource="http://moustaki.org/foaf.rdf#moustaki"/>
-  </sim:Association>
+  </ao:LikeableAssociation>
   <mo:Genre rdf:about="http://example.org/Funk"/>
   <pbo:Playist rdf:about="http://example.org/FunkyPlaylist">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
