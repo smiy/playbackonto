@@ -1,0 +1,61 @@
+# Saved by TopBraid on Sun Jun 27 23:41:15 CEST 2010
+# baseURI: http://example.org/
+
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix olo:     <http://purl.org/ontology/olo/core#> .
+@prefix pbo:     <http://purl.org/ontology/pbo/core#> .
+@prefix ao:     <http://purl.org/ontology/ao/core#> .
+@prefix mo:		<http://purl.org/ontology/mo/> .
+@prefix ex:		<http://example.org/> .
+@prefix sim:    <http://purl.org/ontology/similarity/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://smiy.sourceforge.net/pbo/examples/N3/playlist_-_example.n3>
+      rdf:type bibo:Document ;
+      dc:creator <http://foaf.me/zazi#me> ;
+      dc:date "2010-07-21T11:54:52+01:00"^^xsd:dateTime ;
+      dc:description """This document includes an example of a music playlist, created mainly with concepts from the Play Back 
+Ontology, Association Ontology, Similarity Ontology and Music Ontology."""@en ;
+      rdfs:seeAlso <http://purl.org/ontology/pbo/playbackontology.html> ;
+      dc:title "Playlist Example"@en .
+
+ex:FunkyPlaylist a pbo:Playist ;
+        dc:title "Funky Playlist"^^xsd:string ;
+        dc:description "A playlist full of funky legends"^^xsd:string ;
+        dc:creator <http://foaf.me/zazi#me> ;
+		olo:length 2 ;
+		ao:association ex:ZazisAssociation ;
+		ao:association ex:BobsAssociation ;
+		pbo:playlist_slot [   
+			olo:index 1 ;
+			pbo:playlist_item ex:SexMachine
+		] ;
+		pbo:playlist_slot [
+			olo:index 2 ;
+			pbo:playlist_item ex:GoodFoot
+		] .
+
+ex:SexMachine a mo:Track ;
+	dc:title "Sex Machine"^^xsd:string ;
+	dc:creator <http://dbpedia.org/resource/James_Brown> .
+
+ex:GoodFoot a mo:Track ;
+	dc:title "Good Foot"^^xsd:string .	
+	
+ex:ZazisAssociation a sim:Association ;
+        dc:creator <http://foaf.me/zazi#me> ;
+		ao:genre "Funk" ;
+		ao:mood "party" ;
+		ao:occasion "my birthday party 2008" .
+		
+ex:BobsAssociation a sim:Association ;
+		dc:creator <http://foaf.me/zazi#me> ;
+		ao:genre ex:Funk ;
+		ao:mood "happy" ;
+		ao:occasion "good feeling music" ;
+		ao:likeminded <http://moustaki.org/foaf.rdf#moustaki> .
+		
+ex:Funk a mo:Genre .
