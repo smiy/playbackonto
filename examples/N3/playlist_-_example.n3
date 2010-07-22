@@ -22,13 +22,13 @@ Ontology, Association Ontology, Similarity Ontology and Music Ontology."""@en ;
       rdfs:seeAlso <http://purl.org/ontology/pbo/playbackontology.html> ;
       dc:title "Playlist Example"@en .
 
-ex:FunkyPlaylist a pbo:Playist ;
+ex:FunkyPlaylist a pbo:Playlist ;
         dc:title "Funky Playlist"^^xsd:string ;
         dc:description "A playlist full of funky legends"^^xsd:string ;
         dc:creator <http://foaf.me/zazi#me> ;
 		olo:length 2 ;
-		ao:association ex:ZazisAssociation ;
-		ao:association ex:BobsAssociationInUse ;
+		sim:association ex:ZazisAssociation ;
+		sim:association ex:BobsAssociationInUse ;
 		pbo:playlist_slot [   
 			olo:index 1 ;
 			pbo:playlist_item ex:SexMachine
@@ -47,15 +47,15 @@ ex:GoodFoot a mo:Track ;
 	
 ex:ZazisAssociation a sim:Association ;
         dc:creator <http://foaf.me/zazi#me> ;
-		ao:genre "Funk" ;
-		ao:mood "party" ;
-		ao:occasion "my birthday party 2008" .
+		ao:genre "Funk"^^xsd:string ;
+		ao:mood "party"^^xsd:string ;
+		ao:occasion "my birthday party 2008"^^xsd:string .
 		
 ex:BobsAssociation a sim:Association ;
 		dc:creator <http://foaf.me/zazi#me> ;
 		ao:genre ex:Funk ;
-		ao:mood "happy" ;
-		ao:occasion "good feeling music" .
+		ao:mood "happy"^^xsd:string ;
+		ao:occasion "good feeling music"^^xsd:string .
 		
 ex:BobsAssociationInUse a ao:LikeableAssociation ;
 		ao:included_association ex:BobsAssociation ;

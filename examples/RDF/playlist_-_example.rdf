@@ -15,20 +15,18 @@
   <sim:Association rdf:about="http://example.org/BobsAssociation">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
     <ao:genre rdf:resource="http://example.org/Funk"/>
-    <ao:mood>happy</ao:mood>
-    <ao:occasion>good feeling music</ao:occasion>
+    <ao:mood rdf:datatype="http://www.w3.org/2001/XMLSchema#string">happy</ao:mood>
+    <ao:occasion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good feeling music</ao:occasion>
   </sim:Association>
   <ao:LikeableAssociation rdf:about="http://example.org/BobsAssociationInUse">
     <ao:included_association rdf:resource="http://example.org/BobsAssociation"/>
     <ao:likeminded rdf:resource="http://moustaki.org/foaf.rdf#moustaki"/>
   </ao:LikeableAssociation>
   <mo:Genre rdf:about="http://example.org/Funk"/>
-  <pbo:Playist rdf:about="http://example.org/FunkyPlaylist">
+  <pbo:Playlist rdf:about="http://example.org/FunkyPlaylist">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
     <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A playlist full of funky legends</dc:description>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Funky Playlist</dc:title>
-    <ao:association rdf:resource="http://example.org/BobsAssociationInUse"/>
-    <ao:association rdf:resource="http://example.org/ZazisAssociation"/>
     <olo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</olo:length>
     <pbo:playlist_slot>
       <rdf:Description>
@@ -42,7 +40,9 @@
         <pbo:playlist_item rdf:resource="http://example.org/GoodFoot"/>
       </rdf:Description>
     </pbo:playlist_slot>
-  </pbo:Playist>
+    <sim:association rdf:resource="http://example.org/BobsAssociationInUse"/>
+    <sim:association rdf:resource="http://example.org/ZazisAssociation"/>
+  </pbo:Playlist>
   <mo:Track rdf:about="http://example.org/GoodFoot">
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Good Foot</dc:title>
   </mo:Track>
@@ -52,9 +52,9 @@
   </mo:Track>
   <sim:Association rdf:about="http://example.org/ZazisAssociation">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
-    <ao:genre>Funk</ao:genre>
-    <ao:mood>party</ao:mood>
-    <ao:occasion>my birthday party 2008</ao:occasion>
+    <ao:genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Funk</ao:genre>
+    <ao:mood rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party</ao:mood>
+    <ao:occasion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">my birthday party 2008</ao:occasion>
   </sim:Association>
   <bibo:Document rdf:about="http://smiy.sourceforge.net/pbo/examples/RDF/playlist_-_example.rdf">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
