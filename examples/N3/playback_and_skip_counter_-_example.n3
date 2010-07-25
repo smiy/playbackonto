@@ -23,14 +23,14 @@
       rdfs:seeAlso <http://purl.org/ontology/pbo/playbackontology.html> ;
       dc:title "Play Back and Skip Counter Example"@en .
 
-ex:PlayBackCounter a co:PlayBackCounter ;
+ex:PlayBackCounter a pbo:PlayBackCounter ;
 	  dc:title "Play Back Counter"^^xsd:string ;
 	  dc:creator <http://foaf.me/zazi#me> ;
 	  dc:description "A play back counter of a specific music track"^^xsd:string ;
 	  co:count "2"^^xsd:integer ;
-	  pbo:medi_object ex:SexMachine .
+	  pbo:media_object ex:SexMachine .
 	  
-ex:SkipCounter a co:SkipCounter ;
+ex:SkipCounter a pbo:SkipCounter ;
 	  dc:title "Skip Counter"^^xsd:string ;
 	  dc:creator <http://foaf.me/zazi#me> ;
 	  dc:description "A skip counter of a specific music track"^^xsd:string ;

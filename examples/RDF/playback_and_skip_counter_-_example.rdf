@@ -15,13 +15,13 @@
    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
    xml:base="http://example.org/">
   <owl:Thing rdf:about="http://example.org/MyPC"/>
-  <co:PlayBackCounter rdf:about="http://example.org/PlayBackCounter">
+  <pbo:PlayBackCounter rdf:about="http://example.org/PlayBackCounter">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
     <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A play back counter of a specific music track</dc:description>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Play Back Counter</dc:title>
     <co:count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</co:count>
-    <pbo:medi_object rdf:resource="http://example.org/SexMachine"/>
-  </co:PlayBackCounter>
+    <pbo:media_object rdf:resource="http://example.org/SexMachine"/>
+  </pbo:PlayBackCounter>
   <mo:Track rdf:about="http://example.org/SexMachine">
     <dc:creator rdf:resource="http://dbpedia.org/resource/James_Brown"/>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sex Machine</dc:title>
@@ -59,13 +59,13 @@
     <co:device rdf:resource="http://example.org/MyPC"/>
     <co:event_counter rdf:resource="http://example.org/SkipCounter"/>
   </co:ScrobbleEvent>
-  <co:SkipCounter rdf:about="http://example.org/SkipCounter">
+  <pbo:SkipCounter rdf:about="http://example.org/SkipCounter">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
     <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A skip counter of a specific music track</dc:description>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skip Counter</dc:title>
     <co:count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</co:count>
     <pbo:media_object rdf:resource="http://example.org/SexMachine"/>
-  </co:SkipCounter>
+  </pbo:SkipCounter>
   <am:Application rdf:about="http://example.org/iTunes"/>
   <bibo:Document rdf:about="http://smiy.sourceforge.net/pbo/examples/RDF/playback_and_skip_counter_-_example.rdf">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
