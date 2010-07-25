@@ -1,4 +1,9 @@
 =========================
+Version 0.41 (July 2010)
+=========================
+ * ADDED: owl:Class as type to all owl:unionOf statements
+
+=========================
 Version 0.4 (July 2010)
 =========================
  * CHANGED: (back) pbo:play_back_counter to pbo:PlayBackCounter, which is a sub class of co:Counter

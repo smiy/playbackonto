@@ -1,4 +1,4 @@
-# Saved by TopBraid on Sat Jul 24 18:12:07 CEST 2010
+# Saved by TopBraid on Sun Jul 25 12:54:34 CEST 2010
 # baseURI: null
 
 @prefix composite:  <http://www.topbraid.org/2007/05/composite.owl#> .
@@ -11,91 +11,39 @@
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
 []    rdf:type visual:Graph ;
-      rdfs:label "pbo:Playlist Graph" ;
+      rdfs:label "pbo:play_back_and_skip_counter Graph" ;
       visual:child
               [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/pbo/core#previous_playlist_slot> ;
+                visual:depicts <http://purl.org/ontology/co/core#event> ;
                 visual:height "75"^^xsd:int ;
-                visual:width "277"^^xsd:int ;
-                visual:x "433"^^xsd:int ;
-                visual:y "586"^^xsd:int
+                visual:width "276"^^xsd:int ;
+                visual:x "823"^^xsd:int ;
+                visual:y "452"^^xsd:int
               ] ;
       visual:child
               [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/bibo/Document> ;
-                visual:height "94"^^xsd:int ;
-                visual:width "284"^^xsd:int ;
-                visual:x "1280"^^xsd:int ;
-                visual:y "256"^^xsd:int
-              ] ;
-      visual:child
-              [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/pbo/core#next_playlist_slot> ;
-                visual:height "75"^^xsd:int ;
-                visual:width "277"^^xsd:int ;
-                visual:x "433"^^xsd:int ;
-                visual:y "800"^^xsd:int
-              ] ;
-      visual:child
-              [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/pbo/core#PlaylistSlot> ;
-                visual:height "75"^^xsd:int ;
-                visual:width "255"^^xsd:int ;
-                visual:x "861"^^xsd:int ;
-                visual:y "586"^^xsd:int
-              ] ;
-      visual:child
-              [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/pbo/core#playlist> ;
-                visual:height "75"^^xsd:int ;
-                visual:width "267"^^xsd:int ;
-                visual:x "21"^^xsd:int ;
-                visual:y "330"^^xsd:int
-              ] ;
-      visual:child
-              [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/pbo/core#playlist_item> ;
-                visual:height "75"^^xsd:int ;
-                visual:width "263"^^xsd:int ;
-                visual:x "433"^^xsd:int ;
-                visual:y "1014"^^xsd:int
-              ] ;
-      visual:child
-              [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/olo/core#OrderedList> ;
-                visual:height "75"^^xsd:int ;
-                visual:width "272"^^xsd:int ;
-                visual:x "1280"^^xsd:int ;
-                visual:y "42"^^xsd:int
-              ] ;
-      visual:child
-              [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/pbo/core#Playlist> ;
-                visual:height "75"^^xsd:int ;
-                visual:width "265"^^xsd:int ;
-                visual:x "861"^^xsd:int ;
-                visual:y "158"^^xsd:int
-              ] ;
-      visual:child
-              [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/pbo/core#playlist_slot> ;
-                visual:height "75"^^xsd:int ;
-                visual:width "263"^^xsd:int ;
-                visual:x "433"^^xsd:int ;
-                visual:y "330"^^xsd:int
-              ] ;
-      visual:child
-              [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/pbo/core#occasion> ;
+                visual:depicts <http://purl.org/ontology/pbo/core#play_back_counter> ;
                 visual:height "75"^^xsd:int ;
                 visual:width "279"^^xsd:int ;
-                visual:x "433"^^xsd:int ;
-                visual:y "74"^^xsd:int
+                visual:x "165"^^xsd:int ;
+                visual:y "433"^^xsd:int
               ] ;
-      visual:depicts <http://purl.org/ontology/pbo/core#Playlist> .
-
-[]    rdf:type visual:Graph ;
-      rdfs:label "pbo:play_back_and_skip_counter Graph" ;
+      visual:child
+              [ rdf:type visual:Box ;
+                visual:depicts <http://purl.org/ontology/pbo/core#media_object> ;
+                visual:height "75"^^xsd:int ;
+                visual:width "279"^^xsd:int ;
+                visual:x "1160"^^xsd:int ;
+                visual:y "633"^^xsd:int
+              ] ;
+      visual:child
+              [ rdf:type visual:Box ;
+                visual:depicts <http://purl.org/ontology/co/core#event_counter> ;
+                visual:height "75"^^xsd:int ;
+                visual:width "275"^^xsd:int ;
+                visual:x "385"^^xsd:int ;
+                visual:y "309"^^xsd:int
+              ] ;
       visual:child
               [ rdf:type visual:Box ;
                 visual:depicts <http://purl.org/ontology/co/core#Counter> ;
@@ -111,6 +59,14 @@
                 visual:width "283"^^xsd:int ;
                 visual:x "479"^^xsd:int ;
                 visual:y "613"^^xsd:int
+              ] ;
+      visual:child
+              [ rdf:type visual:Box ;
+                visual:depicts <http://purl.org/ontology/co/core#object> ;
+                visual:height "75"^^xsd:int ;
+                visual:width "276"^^xsd:int ;
+                visual:x "966"^^xsd:int ;
+                visual:y "307"^^xsd:int
               ] ;
       visual:child
               [ rdf:type visual:Box ;
@@ -130,30 +86,6 @@
               ] ;
       visual:child
               [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/pbo/core#media_object> ;
-                visual:height "75"^^xsd:int ;
-                visual:width "279"^^xsd:int ;
-                visual:x "1160"^^xsd:int ;
-                visual:y "633"^^xsd:int
-              ] ;
-      visual:child
-              [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/pbo/core#play_back_counter> ;
-                visual:height "75"^^xsd:int ;
-                visual:width "279"^^xsd:int ;
-                visual:x "165"^^xsd:int ;
-                visual:y "433"^^xsd:int
-              ] ;
-      visual:child
-              [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/co/core#event_counter> ;
-                visual:height "75"^^xsd:int ;
-                visual:width "275"^^xsd:int ;
-                visual:x "385"^^xsd:int ;
-                visual:y "309"^^xsd:int
-              ] ;
-      visual:child
-              [ rdf:type visual:Box ;
                 visual:depicts <http://purl.org/ontology/pbo/core#skip_counter> ;
                 visual:height "75"^^xsd:int ;
                 visual:width "277"^^xsd:int ;
@@ -168,20 +100,88 @@
                 visual:x "1162"^^xsd:int ;
                 visual:y "447"^^xsd:int
               ] ;
-      visual:child
-              [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/co/core#object> ;
-                visual:height "75"^^xsd:int ;
-                visual:width "276"^^xsd:int ;
-                visual:x "966"^^xsd:int ;
-                visual:y "307"^^xsd:int
-              ] ;
-      visual:child
-              [ rdf:type visual:Box ;
-                visual:depicts <http://purl.org/ontology/co/core#event> ;
-                visual:height "75"^^xsd:int ;
-                visual:width "276"^^xsd:int ;
-                visual:x "823"^^xsd:int ;
-                visual:y "452"^^xsd:int
-              ] ;
       visual:depicts <http://purl.org/ontology/pbo/core#play_back_counter> .
+
+[]    rdf:type visual:Graph ;
+      rdfs:label "pbo:Playlist Graph" ;
+      visual:child
+              [ rdf:type visual:Box ;
+                visual:depicts <http://purl.org/ontology/bibo/Document> ;
+                visual:height "94"^^xsd:int ;
+                visual:width "284"^^xsd:int ;
+                visual:x "1280"^^xsd:int ;
+                visual:y "256"^^xsd:int
+              ] ;
+      visual:child
+              [ rdf:type visual:Box ;
+                visual:depicts <http://purl.org/ontology/pbo/core#playlist_slot> ;
+                visual:height "75"^^xsd:int ;
+                visual:width "263"^^xsd:int ;
+                visual:x "433"^^xsd:int ;
+                visual:y "330"^^xsd:int
+              ] ;
+      visual:child
+              [ rdf:type visual:Box ;
+                visual:depicts <http://purl.org/ontology/pbo/core#playlist_item> ;
+                visual:height "75"^^xsd:int ;
+                visual:width "263"^^xsd:int ;
+                visual:x "433"^^xsd:int ;
+                visual:y "1014"^^xsd:int
+              ] ;
+      visual:child
+              [ rdf:type visual:Box ;
+                visual:depicts <http://purl.org/ontology/pbo/core#previous_playlist_slot> ;
+                visual:height "75"^^xsd:int ;
+                visual:width "277"^^xsd:int ;
+                visual:x "433"^^xsd:int ;
+                visual:y "586"^^xsd:int
+              ] ;
+      visual:child
+              [ rdf:type visual:Box ;
+                visual:depicts <http://purl.org/ontology/pbo/core#PlaylistSlot> ;
+                visual:height "75"^^xsd:int ;
+                visual:width "255"^^xsd:int ;
+                visual:x "861"^^xsd:int ;
+                visual:y "586"^^xsd:int
+              ] ;
+      visual:child
+              [ rdf:type visual:Box ;
+                visual:depicts <http://purl.org/ontology/pbo/core#Playlist> ;
+                visual:height "75"^^xsd:int ;
+                visual:width "265"^^xsd:int ;
+                visual:x "861"^^xsd:int ;
+                visual:y "158"^^xsd:int
+              ] ;
+      visual:child
+              [ rdf:type visual:Box ;
+                visual:depicts <http://purl.org/ontology/pbo/core#playlist> ;
+                visual:height "75"^^xsd:int ;
+                visual:width "267"^^xsd:int ;
+                visual:x "21"^^xsd:int ;
+                visual:y "330"^^xsd:int
+              ] ;
+      visual:child
+              [ rdf:type visual:Box ;
+                visual:depicts <http://purl.org/ontology/pbo/core#next_playlist_slot> ;
+                visual:height "75"^^xsd:int ;
+                visual:width "277"^^xsd:int ;
+                visual:x "433"^^xsd:int ;
+                visual:y "800"^^xsd:int
+              ] ;
+      visual:child
+              [ rdf:type visual:Box ;
+                visual:depicts <http://purl.org/ontology/olo/core#OrderedList> ;
+                visual:height "75"^^xsd:int ;
+                visual:width "272"^^xsd:int ;
+                visual:x "1280"^^xsd:int ;
+                visual:y "42"^^xsd:int
+              ] ;
+      visual:child
+              [ rdf:type visual:Box ;
+                visual:depicts <http://purl.org/ontology/pbo/core#occasion> ;
+                visual:height "75"^^xsd:int ;
+                visual:width "279"^^xsd:int ;
+                visual:x "433"^^xsd:int ;
+                visual:y "74"^^xsd:int
+              ] ;
+      visual:depicts <http://purl.org/ontology/pbo/core#Playlist> .
