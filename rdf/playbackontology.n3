@@ -1,4 +1,4 @@
-# Saved by TopBraid on Sun Jul 25 12:54:34 CEST 2010
+# Saved by TopBraid on Sun Jul 25 18:56:49 CEST 2010
 # baseURI: http://purl.org/ontology/pbo/core#
 # imports: http://purl.org/ontology/olo/core
 # imports: http://purl.org/ontology/bibo/
@@ -22,13 +22,13 @@
 
 pbo:  rdf:type owl:Ontology ;
       dc:creator <http://foaf.me/zazi#me> ;
-      dc:date "2010-07-25T11:54:52+01:00"^^xsd:dateTime ;
+      dc:date "2010-07-25T17:56:52+01:00"^^xsd:dateTime ;
       dc:description """The Play Back Ontology specification provides basic concepts and properties 
 for describing a concepts that are related to the play back domain, e.g. an playlist, play back count and skip counter 
 on/ for the Semantic Web. This document contains a RDF description of the Play Back Ontology."""@en ;
       dc:title "The Play Back Ontology"@en ;
       owl:imports bibo: , <http://purl.org/ontology/olo/core> , <http://www.w3.org/2003/06/sw-vocab-status/ns> , <http://purl.org/vocab/frbr/core> , <http://purl.org/ontology/co/core> , dc: ;
-      owl:versionInfo 0.41 .
+      owl:versionInfo 0.42 .
 
 pbo:FixedPlaylist
       rdf:type owl:Class ;
@@ -60,7 +60,7 @@ pbo:Playlist
       rdfs:comment "A playlist of specific media items, e.g. music tracks, videos or slides."@en ;
       rdfs:isDefinedBy pbo: ;
       rdfs:label "Playlist"@en ;
-      rdfs:subClassOf bibo:Document , olo:OrderedList ;
+      rdfs:subClassOf olo:OrderedList , bibo:Document ;
       vs:term_status "unstable"@en .
 
 pbo:PlaylistSlot
@@ -99,7 +99,7 @@ pbo:media_object
       vs:term_status "unstable"@en .
 
 pbo:playlist
-      rdf:type rdf:Property , owl:ObjectProperty ;
+      rdf:type owl:ObjectProperty ;
       rdfs:comment "Associates a playlist to something."@en ;
       rdfs:domain owl:Thing ;
       rdfs:isDefinedBy pbo: ;

@@ -1,4 +1,9 @@
 =========================
+Version 0.42 (July 2010)
+=========================
+ * MODIFIED: pbo:playlist - removed rdf:Property from property types
+
+=========================
 Version 0.41 (July 2010)
 =========================
  * ADDED: owl:Class as type to all owl:unionOf statements
