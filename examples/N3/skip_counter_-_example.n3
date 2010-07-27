@@ -46,14 +46,14 @@ ex:SexMachineSignal a mo:Signal ;
 	mo:published_as ex:SexMachine . 
     
 ex:SexMachineSE3 a pbo:SkipEvent ;
-	pbo:skip_time [
-    		a time:Instant ;
+    pbo:skip_time [
+            a time:Instant ;
     		tl:timeline ex:SexMachineTL ;
-			tl:at "PT30S"^^xsd:duration
+    		tl:at "PT30S"^^xsd:duration
     		] ;
     event:time [
     		a time:Instant ;
-    		time:inXSDDateTime "2010-07-15T11:35:52+01:00"^^xsd:dateTime
+            time:inXSDDateTime "2010-07-15T11:35:52+01:00"^^xsd:dateTime
     		] ;
     event:agent <http://foaf.me/zazi#me> ; 
     co:application ex:iTunes ;
