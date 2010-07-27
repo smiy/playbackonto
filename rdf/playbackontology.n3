@@ -20,6 +20,7 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vs:      <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix time:	<http://www.w3.org/2006/time#> .
 
 pbo:  rdf:type owl:Ontology ;
       dc:creator <http://foaf.me/zazi#me> ;
