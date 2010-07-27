@@ -40,7 +40,7 @@ ex:SexMachineTL a tl:TimeLine .
 ex:SexMachineSignal a mo:Signal ;
 	mo:time [
 			a time:Interval ;
-     		tl:duration "PT5M18S" ;
+     		tl:duration "PT5M18S"^^xsd:duration ;
      		tl:timeline ex:SexMachineTL 
   			] ;
 	mo:published_as ex:SexMachine . 
@@ -48,8 +48,8 @@ ex:SexMachineSignal a mo:Signal ;
 ex:SexMachineSE3 a pbo:SkipEvent ;
     pbo:skip_time [
             a time:Instant ;
-    		tl:timeline ex:SexMachineTL ;
-    		tl:at "PT30S"^^xsd:duration
+            tl:timeline ex:SexMachineTL ;
+            tl:at "PT30S"^^xsd:duration
     		] ;
     event:time [
     		a time:Instant ;
