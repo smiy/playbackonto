@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:am="http://vocab.deri.ie/am#"
+   xmlns:bibo="http://purl.org/ontology/bibo/"
+   xmlns:co="http://purl.org/ontology/co/core#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+   xmlns:ex="http://example.org/"
+   xmlns:mo="http://purl.org/ontology/mo/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:pbo="http://purl.org/ontology/pbo/core#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:time="http://www.w3.org/2006/time#"
+   xmlns:tl="http://purl.org/NET/c4dm/timeline.owl#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xml:base="http://example.org/">
+  <owl:Thing rdf:about="http://example.org/MyPC"/>
+  <mo:Track rdf:about="http://example.org/SexMachine">
+    <dc:creator rdf:resource="http://dbpedia.org/resource/James_Brown"/>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sex Machine</dc:title>
+  </mo:Track>
+  <pbo:SkipEvent rdf:about="http://example.org/SexMachineSE3">
+    <event:agent rdf:resource="http://foaf.me/zazi#me"/>
+    <event:time>
+      <time:Instant>
+        <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-15T11:35:52+01:00</time:inXSDDateTime>
+      </time:Instant>
+    </event:time>
+    <co:application rdf:resource="http://example.org/iTunes"/>
+    <co:device rdf:resource="http://example.org/MyPC"/>
+    <co:event_counter rdf:resource="http://example.org/SkipCounter"/>
+    <pbo:skip_time>
+      <time:Instant>
+        <tl:at rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT30S</tl:at>
+        <tl:timeline rdf:resource="http://example.org/SexMachineTL"/>
+      </time:Instant>
+    </pbo:skip_time>
+  </pbo:SkipEvent>
+  <mo:Signal rdf:about="http://example.org/SexMachineSignal">
+    <mo:published_as rdf:resource="http://example.org/SexMachine"/>
+    <mo:time>
+      <time:Interval>
+        <tl:duration>PT5M18S</tl:duration>
+        <tl:timeline rdf:resource="http://example.org/SexMachineTL"/>
+      </time:Interval>
+    </mo:time>
+  </mo:Signal>
+  <tl:TimeLine rdf:about="http://example.org/SexMachineTL"/>
+  <pbo:SkipCounter rdf:about="http://example.org/SkipCounter">
+    <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A skip counter of a specific music track</dc:description>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skip Counter</dc:title>
+    <co:count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</co:count>
+    <pbo:media_object rdf:resource="http://example.org/SexMachine"/>
+  </pbo:SkipCounter>
+  <am:Application rdf:about="http://example.org/iTunes"/>
+  <bibo:Document rdf:about="http://smiy.sourceforge.net/pbo/examples/RDF/skip_counter_-_example.rdf">
+    <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-27T18:14:52+01:00</dc:date>
+    <dc:description xml:lang="en">This document includes an example of the skip counter concept of the Play Back Ontology.</dc:description>
+    <dc:title xml:lang="en">Skip Counter Example</dc:title>
+    <rdfs:seeAlso rdf:resource="http://purl.org/ontology/pbo/playbackontology.html"/>
+  </bibo:Document>
+</rdf:RDF>

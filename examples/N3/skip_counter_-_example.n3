@@ -1,0 +1,65 @@
+# Saved by TopBraid on Sun Jun 27 23:41:15 CEST 2010
+# baseURI: http://example.org/
+
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix co:     <http://purl.org/ontology/co/core#> .
+@prefix pbo:     <http://purl.org/ontology/pbo/core#> .
+@prefix mo:		<http://purl.org/ontology/mo/> .
+@prefix ex:		<http://example.org/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix event:   <http://purl.org/NET/c4dm/event.owl#> .
+@prefix time:	<http://www.w3.org/2006/time#> .
+@prefix tl:		<http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix am:     <http://vocab.deri.ie/am#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+<http://smiy.sourceforge.net/pbo/examples/N3/skip_counter_-_example.n3>
+      rdf:type bibo:Document ;
+      dc:creator <http://foaf.me/zazi#me> ;
+      dc:date "2010-07-27T18:14:52+01:00"^^xsd:dateTime ;
+      dc:description """This document includes an example of the skip counter concept of the Play Back Ontology."""@en ;
+      rdfs:seeAlso <http://purl.org/ontology/pbo/playbackontology.html> ;
+      dc:title "Skip Counter Example"@en .
+	  
+ex:SkipCounter a pbo:SkipCounter ;
+	  dc:title "Skip Counter"^^xsd:string ;
+	  dc:creator <http://foaf.me/zazi#me> ;
+	  dc:description "A skip counter of a specific music track"^^xsd:string ;
+	  co:count "1"^^xsd:integer ;
+	  pbo:media_object ex:SexMachine .	  
+	  
+ex:SexMachine a mo:Track ;
+	dc:title "Sex Machine"^^xsd:string ;
+	dc:creator <http://dbpedia.org/resource/James_Brown> .
+	
+ex:SexMachineTL a tl:TimeLine .
+
+ex:SexMachineSignal a mo:Signal ;
+	mo:time [
+			a time:Interval ;
+     		tl:duration "PT5M18S" ;
+     		tl:timeline ex:SexMachineTL 
+  			] ;
+	mo:published_as ex:SexMachine . 
+    
+ex:SexMachineSE3 a pbo:SkipEvent ;
+	pbo:skip_time [
+    		a time:Instant ;
+    		tl:timeline ex:SexMachineTL ;
+			tl:at "PT30S"^^xsd:duration
+    		] ;
+    event:time [
+    		a time:Instant ;
+    		time:inXSDDateTime "2010-07-15T11:35:52+01:00"^^xsd:dateTime
+    		] ;
+    event:agent <http://foaf.me/zazi#me> ; 
+    co:application ex:iTunes ;
+    co:device ex:MyPC ;
+    co:event_counter ex:SkipCounter .   
+    
+ex:iTunes a am:Application .
+
+ex:MyPC a owl:Thing .	
