@@ -41,7 +41,7 @@
     <mo:published_as rdf:resource="http://example.org/SexMachine"/>
     <mo:time>
       <time:Interval>
-        <tl:duration>PT5M18S</tl:duration>
+        <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT5M18S</tl:duration>
         <tl:timeline rdf:resource="http://example.org/SexMachineTL"/>
       </time:Interval>
     </mo:time>

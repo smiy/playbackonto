@@ -29,16 +29,16 @@
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Funky Playlist</dc:title>
     <olo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</olo:length>
     <pbo:playlist_slot>
-      <rdf:Description>
-        <olo:index rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</olo:index>
-        <pbo:playlist_item rdf:resource="http://example.org/SexMachine"/>
-      </rdf:Description>
-    </pbo:playlist_slot>
-    <pbo:playlist_slot>
-      <rdf:Description>
+      <pbo:PlaylistSlot>
         <olo:index rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</olo:index>
         <pbo:playlist_item rdf:resource="http://example.org/GoodFoot"/>
-      </rdf:Description>
+      </pbo:PlaylistSlot>
+    </pbo:playlist_slot>
+    <pbo:playlist_slot>
+      <pbo:PlaylistSlot>
+        <olo:index rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</olo:index>
+        <pbo:playlist_item rdf:resource="http://example.org/SexMachine"/>
+      </pbo:PlaylistSlot>
     </pbo:playlist_slot>
     <sim:association rdf:resource="http://example.org/BobsAssociationInUse"/>
     <sim:association rdf:resource="http://example.org/ZazisAssociation"/>
