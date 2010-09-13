@@ -14,6 +14,7 @@
    xmlns:time="http://www.w3.org/2006/time#"
    xmlns:tl="http://purl.org/NET/c4dm/timeline.owl#"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns:ao="http://purl.org/ontology/ao/core#"
    xml:base="http://example.org/">
   <owl:Thing rdf:about="http://example.org/MyPC"/>
   <mo:Track rdf:about="http://example.org/SexMachine">
@@ -27,8 +28,8 @@
         <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-15T11:35:52+01:00</time:inXSDDateTime>
       </time:Instant>
     </event:time>
-    <co:application rdf:resource="http://example.org/iTunes"/>
-    <co:device rdf:resource="http://example.org/MyPC"/>
+    <ao:used_application rdf:resource="http://example.org/iTunes"/>
+    <ao:used_device rdf:resource="http://example.org/MyPC"/>
     <co:event_counter rdf:resource="http://example.org/SkipCounter"/>
     <pbo:skip_time>
       <time:Instant>

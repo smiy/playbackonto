@@ -12,6 +12,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:time="http://www.w3.org/2006/time#"
+   xmlns:ao="http://purl.org/ontology/ao/core#"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
    xml:base="http://example.org/">
   <owl:Thing rdf:about="http://example.org/MyPC"/>
@@ -33,8 +34,8 @@
         <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-15T11:21:52+01:00</time:inXSDDateTime>
       </time:Instant>
     </event:time>
-    <co:application rdf:resource="http://example.org/iTunes"/>
-    <co:device rdf:resource="http://example.org/MyPC"/>
+    <ao:used_application rdf:resource="http://example.org/iTunes"/>
+    <ao:used_device rdf:resource="http://example.org/MyPC"/>
     <co:event_counter rdf:resource="http://example.org/PlayBackCounter"/>
   </co:ScrobbleEvent>
   <co:ScrobbleEvent rdf:about="http://example.org/SexMachineSE2">
@@ -44,8 +45,8 @@
         <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-15T11:27:52+01:00</time:inXSDDateTime>
       </time:Instant>
     </event:time>
-    <co:application rdf:resource="http://example.org/iTunes"/>
-    <co:device rdf:resource="http://example.org/MyPC"/>
+    <ao:used_application rdf:resource="http://example.org/iTunes"/>
+    <ao:used_device rdf:resource="http://example.org/MyPC"/>
     <co:event_counter rdf:resource="http://example.org/PlayBackCounter"/>
   </co:ScrobbleEvent>
   <co:ScrobbleEvent rdf:about="http://example.org/SexMachineSE3">
@@ -55,8 +56,8 @@
         <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-15T11:35:52+01:00</time:inXSDDateTime>
       </time:Instant>
     </event:time>
-    <co:application rdf:resource="http://example.org/iTunes"/>
-    <co:device rdf:resource="http://example.org/MyPC"/>
+    <ao:used_application rdf:resource="http://example.org/iTunes"/>
+    <ao:used_device rdf:resource="http://example.org/MyPC"/>
     <co:event_counter rdf:resource="http://example.org/SkipCounter"/>
   </co:ScrobbleEvent>
   <pbo:SkipCounter rdf:about="http://example.org/SkipCounter">

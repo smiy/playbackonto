@@ -15,6 +15,7 @@
 @prefix tl:		<http://purl.org/NET/c4dm/timeline.owl#> .
 @prefix am:     <http://vocab.deri.ie/am#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix ao:		<http://purl.org/ontology/ao/core#> .
 
 <http://smiy.sourceforge.net/pbo/examples/N3/skip_counter_-_example.n3>
       rdf:type bibo:Document ;
@@ -56,8 +57,8 @@ ex:SexMachineSE3 a pbo:SkipEvent ;
             time:inXSDDateTime "2010-07-15T11:35:52+01:00"^^xsd:dateTime
     		] ;
     event:agent <http://foaf.me/zazi#me> ; 
-    co:application ex:iTunes ;
-    co:device ex:MyPC ;
+    ao:used_application ex:iTunes ;
+    ao:used_device ex:MyPC ;
     co:event_counter ex:SkipCounter .   
     
 ex:iTunes a am:Application .

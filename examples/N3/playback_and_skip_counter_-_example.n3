@@ -14,6 +14,7 @@
 @prefix time:	<http://www.w3.org/2006/time#> .
 @prefix am:     <http://vocab.deri.ie/am#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix ao:		<http://purl.org/ontology/ao/core#> .
 
 <http://smiy.sourceforge.net/pbo/examples/N3/playback_and_skip_counter_-_example.n3>
       rdf:type bibo:Document ;
@@ -47,8 +48,8 @@ ex:SexMachineSE1 a co:ScrobbleEvent ;
     		time:inXSDDateTime "2010-07-15T11:21:52+01:00"^^xsd:dateTime 
     		] ;
     event:agent <http://foaf.me/zazi#me> ;
-    co:application ex:iTunes ;
-    co:device ex:MyPC ;
+    ao:used_application ex:iTunes ;
+    ao:used_device ex:MyPC ;
     co:event_counter ex:PlayBackCounter .
     
 ex:SexMachineSE2 a co:ScrobbleEvent ;
@@ -57,8 +58,8 @@ ex:SexMachineSE2 a co:ScrobbleEvent ;
     		time:inXSDDateTime "2010-07-15T11:27:52+01:00"^^xsd:dateTime
     		] ;
     event:agent <http://foaf.me/zazi#me> ; 
-    co:application ex:iTunes ;
-    co:device ex:MyPC ;
+    ao:used_application ex:iTunes ;
+    ao:used_device ex:MyPC ;
     co:event_counter ex:PlayBackCounter .
     
 ex:SexMachineSE3 a co:ScrobbleEvent ;
@@ -67,8 +68,8 @@ ex:SexMachineSE3 a co:ScrobbleEvent ;
     		time:inXSDDateTime "2010-07-15T11:35:52+01:00"^^xsd:dateTime
     		] ;
     event:agent <http://foaf.me/zazi#me> ; 
-    co:application ex:iTunes ;
-    co:device ex:MyPC ;
+    co:used_application ex:iTunes ;
+    ao:used_device ex:MyPC ;
     co:event_counter ex:SkipCounter .
     
 ex:iTunes a am:Application .
